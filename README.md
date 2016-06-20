@@ -1,28 +1,10 @@
-== README
+This is exercise project on Techmaster’s Rails class.
+Clone some feature of lozi.vn:
+-	Create and manage restaurants
+-	Check-in feature.
+-	Find a restaurant from restaurants list.
+- Vote and comment feature.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Environment
+* Ruby: 2.3
+* Rails: 5.0
