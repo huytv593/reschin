@@ -37,4 +37,17 @@ class RestaurantsController < ApplicationController
       ).exists?
     end
   end
+
+  def checkin
+    @checkin = Checkin.new(checkin_params)
+    @checkin.user = current_user
+    if @checkin.save
+      redirect_to restaurant_path(params[:restaurant_id])
+    end
+  end
+
+  private
+  def checkin_params
+    params.required(:checkin).permit(:comment, :image, :restaurant_id)
+  end
 end
