@@ -70,6 +70,9 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
+    bullet (5.1.0)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.10.0)
     bxslider-rails (4.2.5.1)
     byebug (9.0.5)
     cancancan (1.14.0)
@@ -139,6 +142,8 @@ GEM
       pry (~> 0.10)
     rack (2.0.0.rc1)
       json
+    rack-mini-profiler (0.10.1)
+      rack (>= 1.2.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails-deprecated_sanitizer (1.0.3)
@@ -194,6 +199,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
+    uniform_notifier (1.10.0)
     warden (1.2.6)
       rack (>= 1.0)
     web-console (2.3.0)
@@ -210,6 +216,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  bullet
   bxslider-rails
   byebug
   cancancan
@@ -221,6 +228,7 @@ DEPENDENCIES
   jquery-rails
   pg
   pry-byebug
+  rack-mini-profiler
   rails!
   rails_12factor
   rolify
