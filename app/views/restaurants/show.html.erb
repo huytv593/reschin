@@ -60,7 +60,7 @@
               <% end %>
             </div>
             <div class="col-md-12">
-              <%= unless user_signed_in %>
+              <% unless user_signed_in? %>
                   <p>Vui lòng đăng nhập để bình luận</p>
               <% end %>
               <%= form_for @new_comment, remote: true, html: {class: "comment-form"} do |f| %>

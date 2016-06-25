@@ -29,6 +29,8 @@ class RestaurantsController < ApplicationController
     @new_comment = Comment.new
     @favorites = Favorite.where(restaurant_id: @restaurant.id).count
 
+    @checkin = Checkin.new
+
     if current_user
       @is_liked = Favorite.where(
           user_id: current_user.id, restaurant_id: @restaurant.id
