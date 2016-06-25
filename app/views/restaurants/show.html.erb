@@ -47,10 +47,10 @@
                     <button class="btn <%= @is_liked ? 'btn-danger' : 'btn-primary' %>
                     pull-right" id="btn-like"
                             restaurant-id="<%= @restaurant.id %>">
-                      <%= @is_liked ? 'Bo Thich' : 'Thich' %>
+                      <%= @is_liked ? 'Bỏ thích' : 'Thích' %>
                     </button>
                 <% else %>
-                    <%= link_to 'Thich', new_user_session_path, class: 'btn btn-primary' %>
+                    <%= link_to 'Thích', new_user_session_path, class: 'btn btn-primary' %>
                 <% end %>
 
               </div>

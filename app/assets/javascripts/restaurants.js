@@ -15,7 +15,7 @@ $(document).ready(function(){
                 if ($("#btn-like").hasClass('btn-danger')) {
                     $("#btn-like").text('Thích');
                 } else {
-                    $("#btn-like").text('Bo Thich');
+                    $("#btn-like").text('Bỏ thich');
                 }
 
                 $("#btn-like").toggleClass('btn-danger');
