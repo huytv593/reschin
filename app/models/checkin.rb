@@ -21,6 +21,7 @@ class Checkin < ApplicationRecord
   belongs_to :user
 
   validates :comment, presence: true
+  validates :restaurant_id, presence: true
 
   mount_uploader :image, CheckinUploader
 

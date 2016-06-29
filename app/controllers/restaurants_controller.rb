@@ -41,6 +41,7 @@ class RestaurantsController < ApplicationController
   def checkin
     @checkin = Checkin.new(checkin_params)
     @checkin.user = current_user
+    @checkin.restaurant_id = params[:restaurant_id]
     if @checkin.save
       redirect_to restaurant_path(params[:restaurant_id])
     end

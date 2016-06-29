@@ -16,7 +16,7 @@
             <div class="form-group">
               <%= f.file_field :image %>
             </div>
-            <input hidden name="restaurant_id" value="<%= @restaurant.id unless @restaurant.nil? %>">
+            <input hidden name="restaurant_id" value="<%= @restaurant.id %>">
 
         </div>
         <div class="modal-footer">

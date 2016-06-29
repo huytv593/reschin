@@ -1,0 +1,13 @@
+<div class="checkins-heading">
+  List Checkins:
+</div>
+<div class="checkins-body">
+  <% @restaurant.checkins.each do |checkin| %>
+    <%= image_tag (checkin.image), class: 'img img-rounded img-responsive' %>
+  <% end %>
+</div>
+<div class="checkins-footer">
+  <div class="text-right">
+    Xem thêm...
+  </div>
+</div>
