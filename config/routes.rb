@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { sessions: "users/sessions" }
 
+  default_url_options :host => "example.com"
+
   root 'restaurants#index'
 
   get 'restaurants/:id', to: 'restaurants#show', as: :restaurant
