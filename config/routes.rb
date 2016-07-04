@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   post 'favorites' => 'favorites#create'
 
   post 'comments' => 'comments#create'
+
+  post 'checkin' => 'restaurants#checkin', as: :checkins
   
   namespace :admin do
     resources :articles

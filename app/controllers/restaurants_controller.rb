@@ -29,10 +29,26 @@ class RestaurantsController < ApplicationController
     @new_comment = Comment.new
     @favorites = Favorite.where(restaurant_id: @restaurant.id).count
 
+    @checkin = Checkin.new
+
     if current_user
       @is_liked = Favorite.where(
           user_id: current_user.id, restaurant_id: @restaurant.id
       ).exists?
     end
+  end
+
+  def checkin
+    @checkin = Checkin.new(checkin_params)
+    @checkin.user = current_user
+    @checkin.restaurant_id = params[:restaurant_id]
+    if @checkin.save
+      redirect_to restaurant_path(params[:restaurant_id])
+    end
+  end
+
+  private
+  def checkin_params
+    params.required(:checkin).permit(:comment, :image, :restaurant_id)
   end
 end

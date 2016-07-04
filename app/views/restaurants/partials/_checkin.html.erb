@@ -1,0 +1,28 @@
+<div id="checkIn" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <%= form_for @checkin, :html => { :multipart => true } do |f| %>
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header bg-success">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Checkin</h4>
+        </div>
+        <div class="modal-body">
+
+            <div class="form-group">
+              <%= f.label :comment%>
+              <%= f.text_area :comment, class: "form-control", placeholder: "Bạn nghĩ gì về địa điểm này..."%>
+            </div>
+            <div class="form-group">
+              <%= f.file_field :image %>
+            </div>
+            <input hidden name="restaurant_id" value="<%= @restaurant.id %>">
+
+        </div>
+        <div class="modal-footer">
+          <%= f.submit "Check in", class: "btn btn-danger" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
